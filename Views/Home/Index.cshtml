@@ -1,0 +1,551 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gift of the Givers Foundation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #1a5276;
+            --secondary-color: #f39c12;
+            --accent-color: #e74c3c;
+            --light-bg: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #333;
+        }
+        
+        .navbar-brand img {
+            height: 60px;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            color: #333 !important;
+            margin: 0 10px;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+        }
+        
+        .donate-btn {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 8px 20px;
+            font-weight: 600;
+        }
+        
+        .donate-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .services-bar {
+            background-color: var(--light-bg);
+            font-size: 0.9rem;
+            padding: 8px 0;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(26, 82, 118, 0.9), rgba(26, 82, 118, 0.8)), url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .hero-title {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        
+        .main-headline {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 40px;
+        }
+        
+        .quote-box {
+            background-color: white;
+            color: #333;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .quote-box h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .quote-text {
+            font-style: italic;
+            font-size: 1.1rem;
+            margin-bottom: 0;
+        }
+        
+        .cta-box {
+            background-color: var(--secondary-color);
+            color: #333;
+            border-radius: 8px;
+            padding: 30px;
+            margin: 40px 0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        
+        .cta-title {
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .btn-success {
+            background-color: #27ae60;
+            border: none;
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+        
+        .btn-danger {
+            background-color: var(--accent-color);
+            border: none;
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+        
+        .page-links {
+            padding: 60px 0;
+        }
+        
+        .page-link-btn {
+            padding: 20px 10px;
+            font-weight: 600;
+            border-width: 2px;
+            transition: all 0.3s;
+        }
+        
+        .page-link-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .modal-content {
+            border-radius: 10px;
+            border: none;
+        }
+        
+        .modal-header {
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+        
+        .donation-option {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .donation-option:hover {
+            border-color: var(--primary-color);
+            background-color: #f8f9fa;
+        }
+        
+        .donation-option.selected {
+            border-color: var(--primary-color);
+            background-color: rgba(26, 82, 118, 0.05);
+        }
+        
+        .section-title {
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <!-- Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="https://via.placeholder.com/180x60/1a5276/FFFFFF?text=Gift+of+the+Givers" alt="Gift of the Givers Logo" />
+            </a>
+            
+            <!-- Navigation Links -->
+            <div class="navbar-nav ms-auto">
+                <a class="nav-link active" href="#">HOME</a>
+                <a class="nav-link" href="#About us">ABOUT US</a>
+                <a class="nav-link" href="#partners">PARTNERS</a>
+                <a class="nav-link" href="#contact">CONTACT US</a>
+                <a class="nav-link" href="Login>Login"</a>
+                <a class="nav-link" href="Register>Register"</a>
+
+
+                <a class="nav-link btn donate-btn text-white px-3 ms-2" href="#" data-bs-toggle="modal" data-bs-target="#donateModal">DONATE NOW</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Service Areas -->
+    <div class="services-bar">
+        <div class="container text-center">
+            <div class="row">
+                <div class="col">
+                    <span class="text-muted">DISASTER RESPONSE</span>
+                </div>
+                <div class="col">
+                    <span class="text-muted">HUNGER ALLEVIATION</span>
+                </div>
+                <div class="col">
+                    <span class="text-muted">WATER PROVISION</span>
+                </div>
+                <div class="col">
+                    <span class="text-muted">HEALTHCARE</span>
+                </div>
+                <div class="col">
+                    <span class="text-muted">EDUCATION</span>
+                </div>
+                <div class="col">
+                    <span class="text-muted">HUMAN DEVELOPMENT</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container text-center py-5">
+            <h2 class="hero-title">JOIN TEAM GIFT</h2>
+            <p class="hero-subtitle">When we act together, No one is left behind...</p>
+            <h1 class="main-headline">HELP BUILD A WORLD<br>THAT SEES AND SERVES EVERYONE.</h1>
+            
+            <!-- Quote Section -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <div class="quote-box">
+                        <h3>Gift of the Givers Foundation</h3>
+                        <p class="quote-text">"Beaming People are those who Benefit Mankind"</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-md-8">
+                    <div class="cta-box">
+                        <h4 class="cta-title">JOIN TEAM GIFT</h4>
+                        <p class="mb-3">from as little as R50 per month, you could change people's lives</p>
+                        <div class="d-flex justify-content-center gap-3">
+                            <a href="#" class="btn btn-success px-4">BackaBuddy</a>
+                            <a href="#" class="btn btn-danger px-4" data-bs-toggle="modal" data-bs-target="#donateModal">Donate Here</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page Links Section -->
+    <div class="container page-links">
+        <div class="row">
+            <div class="col-md-3 mb-3">
+                <a href="#about us" class="btn btn-outline-success w-100 py-3 page-link-btn">
+                    About Us
+                </a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="#projects" class="btn btn-outline-primary w-100 py-3 page-link-btn">
+                    Our Projects
+                </a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="#" class="btn btn-outline-warning w-100 py-3 page-link-btn" data-bs-toggle="modal" data-bs-target="#donateModal">
+                    Donate
+                </a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="#contact" class="btn btn-outline-dark w-100 py-3 page-link-btn">
+                    Contact Us
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <div id="about" class="container py-5">
+        <h2 class="section-title text-center">About Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <p>Gift of the Givers Foundation is the largest disaster response, non-governmental organisation of African origin on the African continent.</p>
+                <p>Our essential purpose is to serve all people in need, irrespective of race, religion, culture, or political affiliation.</p>
+            </div>
+            <div class="col-md-6">
+                <p>We provide a comprehensive range of services including:</p>
+                <ul>
+                    <li>Disaster Response and Relief</li>
+                    <li>Primary Health Care</li>
+                    <li>Water Provision</li>
+                    <li>Food Security</li>
+                    <li>Education Support</li>
+                    <li>Skills Development</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Projects Section -->
+    <div id="projects" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Our Projects</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Disaster Response</h5>
+                        <p class="card-text">Rapid deployment of aid during natural disasters, conflicts, and humanitarian crises.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Water Provision</h5>
+                        <p class="card-text">Drilling boreholes and providing clean water to drought-stricken communities.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h5 class="card-title">Healthcare</h5>
+                        <p class="card-text">Mobile medical clinics and support for healthcare facilities in underserved areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Partners Section -->
+    <div id="partners" class="container py-5">
+        <h2 class="section-title text-center">Our Partners</h2>
+        <div class="row text-center">
+            <div class="col-md-3 mb-3">
+                <div class="p-3 border rounded">Partner 1</div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="p-3 border rounded">Partner 2</div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="p-3 border rounded">Partner 3</div>
+            </div>
+            <div class="col-md-3 mb-3">
+                <div class="p-3 border rounded">Partner 4</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="container py-5 bg-light">
+        <h2 class="section-title text-center">Contact Us</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <h5>Get in Touch</h5>
+                <p><strong>Address:</strong> 123 Charity Street, Johannesburg, South Africa</p>
+                <p><strong>Phone:</strong> +27 11 123 4567</p>
+                <p><strong>Email:</strong> info@giftofthegivers.org</p>
+                
+                <h5 class="mt-4">Follow Us</h5>
+                <div class="d-flex gap-3">
+                    <a href="#" class="btn btn-outline-primary">Facebook</a>
+                    <a href="#" class="btn btn-outline-info">Twitter</a>
+                    <a href="#" class="btn btn-outline-danger">Instagram</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>&copy; 2023 Gift of the Givers Foundation. All rights reserved.</p>
+            <p>Making a difference through humanitarian aid and community support.</p>
+        </div>
+    </footer>
+
+    <!-- Donate Modal -->
+    <div class="modal fade" id="donateModal" tabindex="-1" aria-labelledby="donateModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="donateModalLabel">Make a Donation</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5 class="mb-3">Select Donation Type</h5>
+                    
+                    <div class="donation-option" onclick="selectDonationOption(this)">
+                        <h6>One-time Donation</h6>
+                        <p>Make a single contribution to support our work</p>
+                    </div>
+                    
+                    <div class="donation-option" onclick="selectDonationOption(this)">
+                        <h6>Monthly Donation</h6>
+                        <p>Become a regular supporter with a monthly contribution</p>
+                    </div>
+                    
+                    <div class="donation-option" onclick="selectDonationOption(this)">
+                        <h6>Project-specific Donation</h6>
+                        <p>Support a specific project or initiative</p>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5 class="mb-3">Donation Amount</h5>
+                        <div class="row">
+                            <div class="col-4 mb-2">
+                                <button class="btn btn-outline-primary w-100" onclick="setAmount(50)">R50</button>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <button class="btn btn-outline-primary w-100" onclick="setAmount(100)">R100</button>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <button class="btn btn-outline-primary w-100" onclick="setAmount(200)">R200</button>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <button class="btn btn-outline-primary w-100" onclick="setAmount(500)">R500</button>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <button class="btn btn-outline-primary w-100" onclick="setAmount(1000)">R1000</button>
+                            </div>
+                            <div class="col-4 mb-2">
+                                <button class="btn btn-outline-primary w-100" onclick="setAmount(0)">Other</button>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <label for="customAmount" class="form-label">Custom Amount (ZAR)</label>
+                            <input type="number" class="form-control" id="customAmount" placeholder="Enter amount">
+                        </div>
+                    </div>
+                    
+                    <div class="mt-4">
+                        <h5 class="mb-3">Payment Method</h5>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
+                            <label class="form-check-label" for="creditCard">
+                                Credit/Debit Card
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="bankTransfer">
+                            <label class="form-check-label" for="bankTransfer">
+                                Bank Transfer
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                            <label class="form-check-label" for="paypal">
+                                PayPal
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" onclick="processDonation()">Donate Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Function to select donation option
+        function selectDonationOption(element) {
+            // Remove selected class from all options
+            document.querySelectorAll('.donation-option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            
+            // Add selected class to clicked option
+            element.classList.add('selected');
+        }
+        
+        // Function to set donation amount
+        function setAmount(amount) {
+            if (amount === 0) {
+                document.getElementById('customAmount').focus();
+            } else {
+                document.getElementById('customAmount').value = amount;
+            }
+        }
+        
+        // Function to process donation
+        function processDonation() {
+            const amount = document.getElementById('customAmount').value;
+            if (!amount || amount <= 0) {
+                alert('Please enter a valid donation amount.');
+                return;
+            }
+            
+            alert(`Thank you for your donation of R${amount}! You will be redirected to the payment gateway.`);
+            // In a real implementation, you would redirect to a payment gateway here
+            // For this demo, we'll just close the modal
+            const modal = bootstrap.Modal.getInstance(document.getElementById('donateModal'));
+            modal.hide();
+        }
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
